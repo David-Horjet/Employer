@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { FaHome, FaLaptopHouse, FaHandHoldingUsd } from "react-icons/fa";
+import {Link} from "react-router-dom";
+import { FaHome, FaLaptopHouse, FaUser } from "react-icons/fa";
 import { BiBuildingHouse } from "react-icons/bi";
 import { TbBuildingWarehouse } from "react-icons/tb";
+import pdf from "../../assets/images/pdf.png"
 
 function DashboardContainer() {
   return (
@@ -21,9 +23,9 @@ function DashboardContainer() {
             <div className="col-sm-6">
               <ol className="breadcrumb pull-right">
                 <li className="breadcrumb-item">
-                  <a href="index.html">
+                  <Link to="index.html">
                     <FaHome />
-                  </a>
+                  </Link>
                 </li>
                 <li className="breadcrumb-item active">Dashboard</li>
               </ol>
@@ -37,12 +39,13 @@ function DashboardContainer() {
             <div className="card all-properties">
               <div className="card-body">
                 <div className="media mb-4 d-flex align-items-center">
+                  <FaUser />
                   <div className="media-body">
                     <h4 className="mb-0">45</h4>
-                    <h6 className="mb-0 light-font">Properties</h6>
+                    <h6 className="mb-0 light-font">Employees</h6>
                   </div>
-                  <a href="listing.html" className="arrow-animated">
-                    See all properties
+                  <Link to="/all" className="arrow-animated">
+                    See all employees
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -57,28 +60,28 @@ function DashboardContainer() {
                     >
                       <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
                 <ul className="light-box d-flex mb-0">
                   <li>
                     <BiBuildingHouse />
                     <div>
                       <h5>1500</h5>
-                      <span className="light-font">Sale</span>
+                      <span className="light-font">Employed</span>
                     </div>
                   </li>
                   <li>
                     <FaLaptopHouse />
                     <div>
                       <h5>380</h5>
-                      <span className="light-font">Rented</span>
+                      <span className="light-font">In Progress</span>
                     </div>
                   </li>
                   <li>
                     <TbBuildingWarehouse />
                     <div>
                       <h5>240</h5>
-                      <span className="light-font">Unlisted</span>
+                      <span className="light-font">Rejected</span>
                     </div>
                   </li>
                 </ul>
@@ -86,48 +89,63 @@ function DashboardContainer() {
             </div>
           </div>
           <div className="col-lg-6 col-md-6">
-            <div className="card invoice-card">
+            <div className="card">
               <div className="card-header pb-0">
-                <div>
-                  <h5>Last Month</h5>
+                <h5>Recently Employed</h5>
+              </div>
+              <div className="card-body management-table">
+                <div className="table-responsive">
+                  <table className="table table-bordernone">
+                    <tbody>
+                      <tr className="d-flex align-items-center justify-content-between">
+                        <td className="p-2">
+                          <div className="media d-flex align-items-center">
+                            <img src={pdf} alt="" />
+                            <div className="media-body">
+                              <h6>Report 8/10/22 - 15/10/22</h6>
+                              <span>Created 16/10/22</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <Link to="text_file.txt" download=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-download light-font"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></Link>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
-              <div className="card-body calculations">
-                <ul className="d-flex p-0 m-0">
-                  <li>
-                    <h5 className="font-success">$47,215</h5>
-                    <h6 className="light-font mb-0">Paid invoices</h6>
-                  </li>
-                  <li>
-                    <h5 className="font-danger">$5,780</h5>
-                    <h6 className="light-font mb-0">Open invoices</h6>
-                  </li>
-                </ul>
-                <div className="d-flex justify-content-between mt-4">
-                  <a
-                    href="agent-invoice.html"
-                    className="label label-light color-4"
-                  >
-                    <FaHandHoldingUsd />
-                    Payments Receive
-                  </a>
-                  <a href="agent-invoice.html" className="arrow-animated">
-                    View all
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="feather feather-chevron-right"
-                    >
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-12">
+            <div className="card">
+              <div className="card-header pb-0">
+                <h5>Management Reports</h5>
+              </div>
+              <div className="card-body management-table">
+                <div className="table-responsive">
+                  <table className="table table-bordernone">
+                    <tbody>
+                      <tr className="d-flex align-items-center justify-content-between">
+                        <td className="p-2">
+                          <div className="media d-flex align-items-center">
+                            <img src={pdf} alt="" />
+                            <div className="media-body">
+                              <h6>Report 8/10/22 - 15/10/22</h6>
+                              <span>Created 16/10/22</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <Link to="text_file.txt" download=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-download light-font"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></Link>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -143,8 +161,14 @@ const Container = styled.div`
   width: 78%;
   right: 0;
   left: auto;
-  height: calc(100vh - 100px);
+  height: 100vh;
   overflow: auto;
+  .table>:not(caption)>*>* {
+    padding: 0.5rem 0.5rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 0px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
   .page-header {
     padding: 30px 0;
     h3 {
@@ -210,18 +234,26 @@ const Container = styled.div`
     }
     .card-body {
       padding: 30px;
+      tr {
+        border: none;
+      }
       .media {
+        svg {
+          font-size: 30px;
+        }
         img {
-          width: 12%;
+          width: 40px;
         }
         .media-body {
           margin-left: 20px;
-          h4 {
-            font-weight: 500;
-            line-height: 1.2;
-          }
           h6 {
             font-weight: 400;
+            color: (--pure-black);
+            font-size: 14px;
+            margin: 0;
+          }
+          span {
+            font-size: 13px;
             color: rgba(88, 97, 103, 0.7);
           }
         }

@@ -17,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard/>}/>
             <Route path="/new" element={<AddEmployee/>}/>
+            <Route path="/all" element={<AddEmployee/>}/>
           </Routes>
         </BrowserRouter>
       </div>

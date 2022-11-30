@@ -1,16 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
 import styled from "styled-components";
-import AddPropertyContainer from "../../";
-import SideNav from "../../components/Main/Admin/SideNav";
-import TopNav from "../../components/Main/Admin/TopNav";
+import SideNav from "../components/Main/SideNav";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Context } from "../../context/Context";
-import { addTenantPropertyRoute } from "../../utils/APIRoutes";
-import RoundLoader from "../../components/Loaders/RoundLoader";
-import toastOptions from "../../components/Toast/ToastOptions";
-import { authAxios } from "../../utils/Axios";
+import { Context } from "../context/Context";
+import { addTenantPropertyRoute } from "../utils/APIRoutes";
+import RoundLoader from "../components/Loaders/RoundLoader";
+import toastOptions from "../components/Toast/ToastOptions";
+import AddEmployeeContainer from "../components/Main/AddEmployeeContainer"
+import { authAxios } from "../utils/Axios";
 
 function AddEmployee() {
   const navigate = useNavigate();

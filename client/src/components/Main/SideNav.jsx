@@ -32,7 +32,7 @@ function SideNav() {
               </NavLink>
             </li>
             <li className="sidebar-item">
-              <NavLink to="/admin/dashboard" className="sidebar-link only-link">
+              <NavLink to="/all" className="sidebar-link only-link">
                 <MdOutlineDashboard/>
                 <span>All Employees</span>
                 <div className="according-menu">

@@ -206,10 +206,9 @@ function AddEmployeeContainer({
 const Container = styled.div`
   flex: 0 0 auto;
   width: 78%;
-  margin-top: 76px;
   right: 0;
   left: auto;
-  height: calc(100vh - 100px);
+  height: 100vh;
   overflow: auto;
   .page-header {
     padding: 30px 0;
