@@ -141,7 +141,6 @@ function DashboardContainer() {
 const Container = styled.div`
   flex: 0 0 auto;
   width: 78%;
-  margin-top: 76px;
   right: 0;
   left: auto;
   height: calc(100vh - 100px);

@@ -10,16 +10,16 @@
 }
 
 :root {
-  --theme-color: #ff5c41;
-  --faded-color: #ff5e417c;
+  --theme-color: 	#1B30AC;
+  --faded-color: #1b31ac96;
   --pure-white: #fff;
   --faded-white: #f5f6f9;
   --faded2-white: #CCCCCC;
   --pure-black: #000;
   --faded-black: #333333;
   --faded-black2: #666666;
-  --theme-default3: #ff5c41;
-  --theme-default4: #ff8c41;
+  --theme-default3: 	#1B30AC;
+  --theme-default4: 		#1B30AC;
   --theme-gradient: linear-gradient(to right, var(--theme-default3) 0%, var(--theme-default4) 51%, var(--theme-default3) 100%);
 }
 

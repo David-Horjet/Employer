@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import styled from "styled-components";
-import AddPropertyContainer from "../../components/Main/Admin/AddPropertyContainer";
+import AddPropertyContainer from "../../";
 import SideNav from "../../components/Main/Admin/SideNav";
 import TopNav from "../../components/Main/Admin/TopNav";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +12,7 @@ import RoundLoader from "../../components/Loaders/RoundLoader";
 import toastOptions from "../../components/Toast/ToastOptions";
 import { authAxios } from "../../utils/Axios";
 
-function AddProperty({ FullScreen, handleFullScreen, reportChange }) {
+function AddEmployee() {
   const navigate = useNavigate();
   const [values, setValues] = useState({
     firstName: "",
@@ -95,12 +95,10 @@ function AddProperty({ FullScreen, handleFullScreen, reportChange }) {
 
   return (
     <>
-      <FullScreen handle={handleFullScreen} onChange={reportChange}>
         <Container className="bg-light">
-          <TopNav handleFullScreen={handleFullScreen} />
           <main className="main row">
             <SideNav />
-            <AddPropertyContainer
+            <AddEmployeeContainer
               handleChange={handleChange}
               handleSubmit={handleSubmit}
               isFetching={isFetching}
@@ -109,7 +107,6 @@ function AddProperty({ FullScreen, handleFullScreen, reportChange }) {
           </main>
         </Container>
         <ToastContainer />
-      </FullScreen>
     </>
   );
 }
@@ -120,4 +117,4 @@ overflow: hidden;
   }
 `;
 
-export default AddProperty;
+export default AddEmployee;

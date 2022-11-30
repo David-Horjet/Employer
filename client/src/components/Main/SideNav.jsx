@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SiHomeadvisor } from "react-icons/si";
-import { MdOutlineDashboard } from "react-icons/md";
-import { BiBuildingHouse } from "react-icons/bi";
-import { BsPeople } from "react-icons/bs";
-import { CgChevronDoubleRight } from "react-icons/cg";
+import { MdOutlineDashboard, MdPersonAddAlt1 } from "react-icons/md";
 import { NavLink, Link } from "react-router-dom";
 
 function SideNav() {
@@ -13,7 +9,7 @@ function SideNav() {
       <Container className="sidenav p-3">
         <div id="mainsidebar">
           <Link to="index.html" className="logo d-flex align-items-center">
-            <SiHomeadvisor />
+            <MdPersonAddAlt1 />
             <span className="d-lg-block">Employer</span>
           </Link>
           <ul className="sidebar-menu custom-scrollbar">
@@ -38,7 +34,7 @@ function SideNav() {
             <li className="sidebar-item">
               <NavLink to="/admin/dashboard" className="sidebar-link only-link">
                 <MdOutlineDashboard/>
-                <span>Dashboard</span>
+                <span>All Employees</span>
                 <div className="according-menu">
                   <i className="fa fa-angle-right"></i>
                 </div>
@@ -128,7 +124,7 @@ const Container = styled.div`
           -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease;
           position: relative;
-          background-color: #fef6f7;
+          background-color: #f1f2f8;
         }
         svg {
           margin-right: 5px;
@@ -145,7 +141,7 @@ const Container = styled.div`
           -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease;
           position: relative;
-          background-color: #fef6f7;
+          background-color: #f1f2f8;
         }
     }
   }

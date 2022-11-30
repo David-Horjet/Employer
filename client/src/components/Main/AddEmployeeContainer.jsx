@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-function AddPropertyContainer({
+function AddEmployeeContainer({
   handleChange,
   handleSubmit,
   isFetching,
@@ -360,4 +360,4 @@ const Container = styled.div`
   }
 `;
 
-export default AddPropertyContainer;
+export default AddEmployeeContainer;
